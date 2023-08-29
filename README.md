@@ -19,3 +19,17 @@ docker run --rm --cap-drop=all userdrop
 3. Added a basic passwd file to drop to a non-root user
 4. Run with all capabilities dropped
 5. For image size with an added initial memory footprint and boot-up time, packed the statically built executable with UPX
+
+## Output/Stats
+
+```bash
+docker inspect userdrop -f '{{.Size}}'
+2250956
+```
+
+```bash
+docker run --rm --cap-drop=all userdrop
+Google returned a '200' status code.
+Called into C function!
+Running as: nobody
+```
